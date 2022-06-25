@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:root {
+    --background-color: hsl(180, 20%, 90%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right,#0F2027,#203A43,#2C5364);
+    font-family: 'Muli',sans-serif;
+    /* background-image: linear-gradient(to top,#C6FFDD,#FBD786,#f7797d); */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 固定页面的宽度 */
+#allcontent { 
+    width: 1519.5px;
+    align-items: center;
+}
+
+/* 导航栏的样式设计 */
+.daohang {
+    background-image: linear-gradient(to right, #141E30, #243B55);
+    height: 80px;
+    margin: 10px;
+    margin-bottom: 0%;
+    padding-bottom: 5px;
+    border: #C4E0E5 solid;
+    /* border: #74ebd5 solid; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* 导航栏的表题 */
+.daohang h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    line-height: 60px;
+    display: flex;
+    position: relative;
+    /* margin-left: 700px; */
+} 
+
+/* 表单的样式 */
+form {
+    position: absolute;
+    top: 50px;
+    left: 92%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    /* box-sizing: border-box; */
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover,
+form:valid {
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input,
+form:valid input {
+    display: block;
+}
+
+form:hover .fa,
+form:valid .fa {
+    background: #07051a;
+    color: white;
+}
+
+
+/* a {
+  display: none;
+  position: relative;
+  top: 70px;
+  bottom:0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  text-align: center; 
+  width: 100%;
+} */
+
+form:valid a {
+  display: block;
+}
+
+nav {
+    /* background-color: #FFFFFF; */
+    background-image: linear-gradient(to rignt,#FFEFBA,#FFFFFF );
+    position: relative;
+    font-size: 28px;
+    height: 90px;
+    padding: 20px;
+    margin-top: 5px;
+    width: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: width 0.6s linear;
+    overflow-x: hidden;
+
+}
+
+nav.active {
+    width: 720px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 5px 0 5px;
+    width: 0;
+    transition: width 0.6s linear;
+}
+
+nav.active ul {
+    width: 100%;
+    /* margin: 3px; */
+}
+
+nav ul li {
+    color: white;
+    transform: rotateX(0dge);
+    opacity: 0;
+    margin: 5px;
+    transition: transform 0.6ms linear, opacity 0.6ms linear;
+}
+
+nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+nav ul a {
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icon {
+    background-color: #141E30;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.icon:focus {
+    outline: 0;
+}
+
+.icon .line {
+    background-color: #FFFFFF;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+}
+
+.gradient-text {
+    color: transparent;
+    background: conic-gradient(
+        #D9D7F1 12%, 
+        #BAABDA 12%, #BAABDA 33%, 
+        #E7FBBE 33%, #E7FBBE 55%, 
+        #FFCBCB 55%, #FFCBCB 70%, 
+        #B5DEFF 70%, #B5DEFF 87%, 
+        #F7D1BA 87%);
+    background-size: 50%;
+    background-clip: text;  
+    -webkit-background-clip: text;
+
+    animation: expand-rev 0.5s ease forwards;
+
+    cursor: pointer;
+    }
+
+.gradient-text:hover {
+    animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+    0% {
+        background-size: 50%;
+        background-position: 0 0;
+    }
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 425%;
+        background-position: -10em -4em;
+    }
+}
+
+@keyframes expand-rev {
+    0% {
+        background-size: 325%;
+        background-position: -10em -4em;
+    }
+    20% {
+        background-size: 55%;
+        background-position: 0 1em;
+    }
+    100% {
+        background-size: 50%;
+        background-position: 0 0;
+    }
+}
+
+#tableContainer {
+    display: table;
+    box-sizing: border-box;
+    /* border: #C4E0E5 solid; */
+    margin-left: 10px;
+    border-spacing: 10px;
+}
+#tableRow {
+    display: table-row;
+}
+
+.msbox {
+    /* border-radius: 5px; */
+    font-family: "SimSun";
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+    
+}
+
+.msbox h2 {
+    color: white;
+    font-family: "SimSun";
+    line-height: 30px;
+    border-bottom: #A1FFCE solid 3px;
+    padding: 4px;
+    letter-spacing: 0.5px;
+    /* text-align: left; */
+}
+
+.msbox p {
+    color: #fff;
+    font-size: 20px;
+    font-family: "SimSun";
+    letter-spacing: 1px;
+    margin-left: 12px;
+    /* padding: 3px; */
+    line-height: 35px;
+    text-align: left;
+}
+
+
+
+.panel-box{
+    position: relative;
+    /* margin: 5px; */
+    /* padding: 0 5px 0 5px; */
+    /* border: #4CA1AF solid; */
+    border-radius: 5px;
+    display: flex;
+    width: 72vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 64vh;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 8px;
+    position: relative;
+    -webkit-transition:all 700ms ease-in;
+    transition: all 700ms ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media  (max-width:460px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
+
+.welcome {
+    margin: 0 10px 10px 10px;
+    /* border:#191654 solid; */
+    background-color: #3f5466;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.welcome h1 {
+    color: #fff;
+    font-size: 56px;
+    line-height: 90px;
+    margin: 0;
+
+}
+
+.cont {
+    background-color: #A1FFCE;
+    border: #E7FBBE solid 2px;
+    border-radius: 5px;
+    height: 200px;
+    margin: 0 10px 10px 10px;
+}
+
+.display {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    height: 400px;
+    margin: 10px;
+    border-radius: 5px;
+    /* padding: 2rem; */
+
+    color: hsla(0, 0%, 0%, .6);
+    background: var(--background-color);
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+  
+.wrap {
+    margin: 20px;
+  
+    transform-style: preserve-3d;
+    transform: perspective(100rem);
+  
+    cursor: pointer;
+}
+  
+.container {
+    --rX: 0;
+    --rY: 0;
+    --bX: 50%;
+    --bY: 80%;
+  
+    width: 256px;
+    height: 320px;
+    border: 1px solid var(--background-color);
+    border-radius: 15px;
+    /* padding-left: 60px; */
+    padding-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  
+    position: relative;
+    transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  
+    background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url("https://images.unsplash.com/photo-1559113513-d5e09c78b9dd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9");
+    background-position: var(--bX) var(--bY);
+    background-size: 400px auto;
+    box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+  
+    transition: transform .6s 1s;
+}
+  
+.container::before,
+.container::after {
+    content: "";
+  
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #fff;
+  
+    position: absolute;
+    z-index: 2;
+  
+    opacity: .3;
+    transition: .3s;
+}
+  
+.container::before {
+    top: 2rem;
+    right: 2rem;
+  
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+  
+.container::after {
+    bottom: 2rem;
+    left: 2rem;
+  
+    border-top-width: 0;
+    border-right-width: 0;
+}
+  
+.container--active {
+    transition: none;
+}
+  
+.container--2 {
+    filter: hue-rotate(80deg) saturate(140%);
+}
+  
+.container--3 {
+    filter: hue-rotate(160deg) saturate(140%);
+}
+
+.container--4 {
+    filter: hue-rotate(240deg) saturate(140%);
+}
+  
+.container p {
+    color: hsla(0, 0%, 100%, .6);
+    font-size: 24px;
+}
+  
+.wrap:hover .container::before,
+.wrap:hover .container::after {
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+}
+
+.footer {
+    color:            #FFF;
+    text-align:       center;
+    padding:          15px;
+    margin: 0px 10px 10px 10px;
+}
+ 
+.selfInfor {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 10px 0 10px;
+}
+
+.selfInfor table {
+    margin: 15px 0 10px 5px;
+    padding: 0 10px 0 10px;
+    font-size: 20px;
+    border: #C4E0E5 solid 3px;
+    border-radius: 5px;
+}
+
+.selfInfor img {
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+tr {
+    align-items: right;
+}
+
+td {
+    color: #A1FFCE;
+    line-height: 40px;
+}
+
+#self {
+    font-family: "SimSun";
+    color: #fff;
+    font-size: 22px;
+    position:absolute;
+    margin: 0 700px 0 10px;
+    line-height: 40px;
+}

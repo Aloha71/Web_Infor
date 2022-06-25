@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact/Contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div id="allcontent">
+        <!-- 顶部导航栏的设计 -->
+        <div class="daohang">
+            <nav class="active" id="nav">
+                <ul>
+                    <li><a href="../Home/index.html" target="_blank">Home</a></li>
+                    <li><a href="../Article/Scenery.html" target="_blank">Scenery</a></li>
+                    <li><a href="../Community/community.html" target="_blank">Community</a></li>
+                    <li><a href="../Contact/Contact.html">Contact</a></li>
+                </ul>
+                <button class="icon" id="toggle">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                </button>
+            </nav>
+            <h1 class="gradient-text">Glad to See Your form!</h1>
+            
+        </div>
+
+        <h2>填写下面的表单，然后与我取得联系！！！</h2>
+
+        <div id="contact">
+            <!-- 表单设计 -->
+            <img src="../Image/contact.jpg" alt="">
+            <table id="Biaoge" width="600" Cellpadding="3px">
+                <caption></caption>
+                <!-- 第一行 -->
+                <tr>
+                    <td>昵称:</td>
+                    <td><input type="text" value="Aloha71"></td>
+                </tr>
+                <!-- 第二行 -->
+                <tr>
+                    <td>性别:</td>
+                    <td>
+                        <input type="radio" name="sex" id="nan"> <label for="nan"> <img src="../image/man.jpg" > 男 </label>  
+                        <input type="radio" name="sex" id="nv"> <label for="nv"><img src="../image/women.jpg" > 女</label> 
+                    </td>
+                </tr>
+                <!-- 第三行 -->
+                <tr>
+                    <td>生日:</td>
+                    <td>
+                        <select>
+                            <option>--请选择年份--</option>
+                            <option>2000</option>
+                            <option>2001</option>
+                            <option>2002</option>
+                            <option>2003</option>
+                        </select>
+                        <select>
+                                <option>--请选择月份--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                        </select>
+                        <select>
+                                <option>--请选择日--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                        </select>
+                
+                    </td>
+                </tr>
+                <!-- 第四行 -->
+                <tr>
+                    <td>所在地区:</td>
+                    <td><input type="text" value="武汉"></td>
+                </tr>
+                <!-- 第五行 -->
+                <tr>
+                    <td>学校:</td>
+                    <td><input type="text" value="中南财经政法大学"></td>
+                </tr>
+                <!-- 第六行 -->
+                <tr>
+                    <td>兴趣:</td>
+                    <td>
+                        <input type="checkbox" name="love" > 旅游 
+                        <input type="checkbox" name="love" > 王者荣耀 
+                        <input type="checkbox" name="love" > 唱歌
+                        <input type="checkbox" name="love" > 吉他 
+                        <input type="checkbox" name="love"  checked="checked"> 都喜欢
+                    </td>
+                </tr>
+                <!-- 第七行 -->
+                <tr>
+                    <td>个人介绍</td>
+                    <td>
+                        <textarea>个人简介</textarea>
+                    </td>
+                </tr>
+                <!-- 第八行 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="上传表单" >
+                    </td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox"  checked="checked">    我同意网站条款和信息收集标准
+                        </td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td>
+                            <a href="#" > 我是会员，立即登录</a>
+                        </td>
+                </tr>                
+            </table>
+        </div>
+        
+
+        <div class="footer">
+            <small>
+                &copy; 2022, Aloha71, 中南财经政法大学
+                <br>
+                All trademarks and registered trademarks appearing on 
+                this site are the property of their respective owners.
+            </small>
+        </div>
+    </div>
+
+
+    <script src="Contact/Contact.js"></script>
+</body>
+</html>
